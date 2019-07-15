@@ -1,4 +1,4 @@
-# **GoogLeNet incarnation of the Inception architecture**
+# **GoogLeNet incarnation of the Inception architecture (Receptive Field Calculation)**
 
 [Refance](https://arxiv.org/pdf/1409.4842.pdf)
 
