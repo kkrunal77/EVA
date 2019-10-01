@@ -1,0 +1,195 @@
+python3.6 keras-retinanet/keras_retinanet/bin/train.py  --batch-size 1 --epochs 100 --tensorboard-dir ./keras-retinanet/Tensorboard_files/ --steps 15160 csv ./all_sample_images/final_train_15k.csv ./all_sample_images/mapping_file.csv 
+
+python3.6 keras-retinanet/keras_retinanet/bin/train.py --snapshot ./snapshots/resnet50_csv_50.h5 --batch-size 1 --epochs 100 --tensorboard-dir ./keras-retinanet/Tensorboard_files/ --steps 15160 csv ./all_sample_images/final_train_15k.csv ./all_sample_images/mapping_file.csv
+
+
+/home/eleven/venv/bin/jupyter notebook --ip=0.0.0.0 --port=9999
+
+
+sudo openvpn cax-linux-openvpn-config.ovpn
+atul.pant
+meaningoflife@2621
+
+
+jediyoda@10.10.10.13
+cax@2621  anish/keras-retinanet/serving_convert.py
+anish/keras-retinanet/tester.py
+
+hitagi@10.10.10.12
+cax@2621
+
+https://www.analyticsindiamag.com/machine-learning-jobs-across-india-via-analytics-india-jobs/
+******************************************* Commands **********************************************
+find lost file(find file)
+
+find ~/ -type f -name "resnet50_csv_50.h5"
+
+cp -R Src_directory Dest_directory
+
+*************************************************************************************************
+google vm login
+
+ssh krunal@praxeum.datax.ai
+
+35.186.152.165
+username : krish
+
+pip freeze > frozen-requirements.txt
+
+cat input-cordlessWMT3I631OMY76.json | grep 47855978
+
+pip list > trq.txt
+
+cd ~/.ssh //Directed to ssh directory
+cat id_rsa.pub //Read the key 
+
+removing files: rm -rf 8075792-1-parrotprint.jpg
+
+RAM/CPU COMMANDS
+
+lscpu
+cat /proc/meminfo
+sudo lshw
+
+###################count no. of in file rows######################
+wc -l Pattern_withoutHTML.csv
+
+######getway or local ip######
+
+curl ipinfo.io/ip
+/anaconda3/bin/jupyter-notebook
+
+sudo /anaconda3/bin/jupyter notebook
+
++++++++++++to different screen+++++++++++++++
+screen -S Jupyter
+screen -r
+
+jupyter notebook &> /dev/null &
+
+jupyter notebook --> to start jupyter notebook
+anaconda-navigator --> to open navigator
+conda info --envs --> to check available environments 
+
+kk@kk:~$ conda info --envs
+# conda environments:
+#
+py27                     /home/kk/anaconda/envs/py27
+py36                     /home/kk/anaconda/envs/py36
+tensorflow            *  /home/kk/anaconda/envs/
+root                     /home/kk/anaconda
+
+source activate [environments name]   |}==on home path(or bloble)
+source deactivate [environments name] |}==on home path(or bloble)
+
+
+# find out number of CPU cores in your machine
+nproc
+
+***free memory in nvidia GPU
+watch nvidia-smi
+
+***Notebook running on ip/port
+jupyter notebook --ip=0.0.0.0 --port=6868
+
+*********************************************************************************************************************************************
+
+uploading
+
+scp [] krunal@praxeum.datax.ai:/home/krunal/web_scraping/
+
+##############################################################################ls -l
+
+downloading 
+
+scp krunal@praxeum.datax.ai:/home/krunal/web_scraping/nordstrom/nord_out_26.zip  .
+###############################################################################
+
+scp ubuntu@kkrunal.cloudapp.net:/home/ubuntu/cencosud_data_for_attribute/batteries_required_sep14_2.csv /home/krunal/Desktop .
+
+scp krunal@regex1.cloudapp.net:/mnt/items_included/krunal_items/without_none.csv .
+cencosud_data_for_attribute
+###############################################################################
+
+for checking in screen or not ps -eaf
+
+
+
+scp pest_type.py ubuntu@abhishek3.cloudapp.net:/home/ubuntu/pest_type
+
+
+for api-streaming
+-------------------
+
+scp pest_type.py ubuntu@abhishek3.cloudapp.net:/home/ubuntu/api_streaming/pest_type
+
+$$$$$$$$$---FOR PYTHON-path ANACONDA VERSON----#####
+
+export PATH="$HOME/anaconda3/bin:$PATH"
+sudo su
+export PATH="/anaconda3/bin:$PATH"
+###############################################################################
+Install tensorflow as tf
+conda create -n tensorflow python=3.5
+
+https://stackoverflow.com/questions/37061089/trouble-with-tensorflow-in-jupyter-notebook
+
+################################################################################
+
+##make/achive tar file(zip, compress)
+tar -zcvf without_none_10.tar.gz without_none_10.csv
+zip myfile{source}.zip filename{destination}.txt
+
+Extract file
+tar -xvzf without_none_9.tar.gz
+
+unzip file.zip -d destination_folder
+
+#################################################################################
+
+$$$$$$$$$
+**VM host name : krunal@regex1.cloudapp.net
+**VM host name : ubuntu@kkrunal.cloudapp.net(my)
+--------------------------------
+ 		
+#################################################################################
+Hosting file
+sudo cp file_name[Word_smlrty.ipynb] /var/www/html/
+to access file : http://kkrunal.cloudapp.net/file_name[Word_smlrty.ipynb]
+
+#################################################################################
+ check code efficiency
+ pylint.exe .\jewellery.py
+#################################################################################
+
+ssh ubuntu@kkrunal.cloudapp.net --> to connect VM
+
+################################################################################
+
+moving(move)from directory to dir
+
+mv -t /destination/directory/ file1 file2 file3
+sudo mv ~/blade_type ~/over_the_counter_medicine_type ~/SUBJECT /mnt/
+
+################################# Gitlab command ####################################
+
+git clone git@crowd
+git fetch
+git stash save your-file-name
+
+git checkout krunal_attribute
+git checkout -b new_branch
+
+git branch
+git add Attribute_model_files/dress_occassion
+git add Attribute_model_files/is_maternity
+git commit -m "dress_occasion and is_maternity"
+git push origin krunal_attribute
+
+####################################github blog########################################
+
+Plz deploy to AE2 staging
+
+[all JSON data on git.](https://...)
+
+##########################################github#######################################
