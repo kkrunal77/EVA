@@ -2,6 +2,10 @@
 
 [Refance](https://arxiv.org/pdf/1409.4842.pdf)
 
+<img src="./images/Screenshot from 2019-06-12 12-07-33.png" alt="ENAS IMAGE" style="zoom:122%;" />
+
+
+
 **Where K = Kernel size, P= Padding, S= Stride**
 
 **η_in = Number Of Input Feature, η_out = Number Of Output Feature** 
