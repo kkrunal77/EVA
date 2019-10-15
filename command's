@@ -3,6 +3,8 @@ python3.6 keras-retinanet/keras_retinanet/bin/train.py  --batch-size 1 --epochs 
 python3.6 keras-retinanet/keras_retinanet/bin/train.py --snapshot ./snapshots/resnet50_csv_50.h5 --batch-size 1 --epochs 100 --tensorboard-dir ./keras-retinanet/Tensorboard_files/ --steps 15160 csv ./all_sample_images/final_train_15k.csv ./all_sample_images/mapping_file.csv
 
 
+keras_retinanet/bin/convert_model.py  --config anchor_config.ini /path/to/training/model.h5 /path/to/save/inference/model.h5
+
 /home/eleven/venv/bin/jupyter notebook --ip=0.0.0.0 --port=9999
 
 
@@ -50,6 +52,9 @@ RAM/CPU COMMANDS
 lscpu
 cat /proc/meminfo
 sudo lshw
+
+###############################################
+tree -L 1/2/3 ./dir/if/any
 
 ###################count no. of in file rows######################
 wc -l Pattern_withoutHTML.csv
