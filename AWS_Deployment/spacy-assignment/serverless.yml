@@ -1,0 +1,41 @@
+service: spacy-ner
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: us-east-1
+
+# you can add packaging information here
+#package:
+#  include:
+#    - include-me.py
+#    - include-me-dir/**
+  exclude:
+    - node_modules/**
+    - .vscode/**
+    - (*).ipynb
+    - __pycache__/**
+    - .ipynb_checkpoints/**
+
+functions:
+  parse-text-kk:
+    handler: handler.handle_request
+    memorySize: 1024
+    timeout: 30
+    events:
+      - http:
+          path: path_ner
+          method: post
+
+custom:
+  pythonRequirements:
+    dcokerizePip: true
+    slim: true
+    zip: true
+    noDeploy: []
+    useDownloadCache: true
+    useStaticCache: true
+
+plugins:
+  - serverless-python-requirements
