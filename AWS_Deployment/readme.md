@@ -21,10 +21,13 @@ sudo pip3 install testresources
 
 
 
-# download docker from https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/
+# download docker from [download.docker.com](https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/)
 
 ```
-#version containerd.io_1.2.4-1_amd64.deb,docker-ce-cli_18.09.3~3-0~ubuntu-bionic_amd64.deb, docker-ce_18.09.3~3-0~ubuntu-bionic_amd64.deb
+# Download below version of docker files
+# version containerd.io_1.2.4-1_amd64.deb,
+# docker-ce-cli_18.09.3~3-0~ubuntu-bionic_amd64.deb, 
+# docker-ce_18.09.3~3-0~ubuntu-bionic_amd64.deb
 
 sudo dpkg -i containerd.io_1.2.4-1_amd64.deb
 sudo dpkg -i docker-ce-cli_18.09.3~3-0~ubuntu-bionic_amd64.deb
@@ -60,7 +63,7 @@ serverless
 
 
 
-# setup AWS user and download ID and Access key from https://console.aws.amazon.com/iam/home?region=us-east-2#/users$new?step=final&accessKey&userNames=serverlessAI&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
+# setup AWS user and download ID and Access key from [AWS](https://console.aws.amazon.com/iam/home?region=us-east-2#/users$new?step=final&accessKey&userNames=serverlessAI&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess)
 
 
 
