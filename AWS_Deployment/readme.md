@@ -1,5 +1,7 @@
 # Welcome to Machine Learning Model Live
 
+[Machine Learning Model Live](https://frount-end.s3.us-east-2.amazonaws.com/index.html)
+
 ![](./images/Machine_Learning_Model_Live-1.jpg)
 
 ![](./images/Machine-Learning-Model-Live-2.jpg)
@@ -16,6 +18,8 @@ sudo python3.6 get-pip.py
 sudo pip3 install testresources
 
 # download docker from https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/
+
+
 #version containerd.io_1.2.4-1_amd64.deb,docker-ce-cli_18.09.3~3-0~ubuntu-bionic_amd64.deb, docker-ce_18.09.3~3-0~ubuntu-bionic_amd64.deb
 
 sudo dpkg -i containerd.io_1.2.4-1_amd64.deb
@@ -46,12 +50,16 @@ serverless
 
 # setup AWS user and download ID and Access key from https://console.aws.amazon.com/iam/home?region=us-east-2#/users$new?step=final&accessKey&userNames=serverlessAI&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
 
+
+
 sls config credentials --provider aws --key [FNGDGGNGNBKGF] --secret [AVDBJKFKJFK] 
 
 #open hidden file goto .aws folder 
 cat credentials
 
 # create hello world application
+
+
 mkdir hello-world
 sls create --template aws-python3 --name hello-service
 
@@ -59,7 +67,9 @@ sls create --template aws-python3 --name hello-service
 sls deploy
 # california-housing
 
-***************************** scikit learn model *************************************************************************
+***************************** scikit learn model *******************************************************************
+
+
 
 conda create -n scikit-dev python=3.6 pylint rope jupyter
 conda activate scikit-dev
@@ -76,15 +86,19 @@ sudo sls deploy
 #check on responce from server 
 sls invoke --function predict-price --path event.json
 
-## **Part of speech tags and parse tree
+## Part of speech tags and parse tree
 
-**************************** **Part of speech tags and parse tree ************************************************************************
+************************ Part of speech tags and parse tree *************************************
+
+
 
 conda create -n spacy-dev python=3.6 pylint rope jupyter
 conda activate spacy-dev
 pip install spacy
 
 # Download spacy model
+
+
 python -m spacy download en_core_web_sm
 
 sls create --template aws-python3 --name spacy-entities
@@ -97,11 +111,11 @@ sudo sls deploy
 
 sls invoke --function parse-text --path event.json --log
 
-![](./images/Screenshot from 2019-11-27 18-19-42.png)
+![kk](./images/Screenshot_from_2019-11-27_18-19-42.png)
 
 ## Recognized Named Entities
 
-********************** Recognized Named Entities *************************************************************************
+*************************** Recognized Named Entities****************************************************************
 
 cd spacy-assignment
 conda activate spacy-dev
@@ -109,11 +123,12 @@ sls invoke local --function parse-text-kk --path event.json
 sls deploy
 sls invoke --function parse-text-kk --path event.json --log
 
-![](./images/Screenshot from 2019-11-28 12-42-56.png)
+![image1](./images/Screenshot_from_2019-11-28_12-42-56.png)
 
 ##  keras-resnet50
 
-****************************** keras-resnet50 ************************************************************************
+****************************** keras-resnet50 ***********************************************************************
+
 conda create -n keras-dev python=3.6 pylint rope jupyter
 
 conda activate keras-dev
@@ -129,9 +144,9 @@ sls plugin install -n serverless-python-requirements@4.2.4
 #sls invoke local --function resnet50-classify --path event.json
 sls invoke local --function keras-resnet50 --path event.json --log
 
-![](./images/Screenshot from 2019-11-29 13-58-37.png)
+![image2](./images/Screenshot_from_2019-11-29_13-58-37.png)
 
-![](./images/Screenshot from 2019-11-28 19-46-42.png)
+![image3](./images/Screenshot_from_2019-11-28_19-46-42.png)
 
 # create deployment env
 conda create -n keras-deploy python=3.6
@@ -154,7 +169,8 @@ sls invoke --function resnet50-classify --path event.json --log
 
 ## keras-inceptionv3
 
-******************************keras-inceptionv3***********************************************************
+****************************** keras-inceptionv3********************************************************************
+
 conda create -n keras-inception python=3.6 pylint rope jupyter
 
 conda activate keras-inception
@@ -170,9 +186,12 @@ sudo sls deploy
 
 sls invoke --function keras-inceptionv3 --path event.json --log
 
-![](./images/Screenshot from 2019-11-29 19-45-17.png)
+![image4](./images/Screenshot_from_2019-11-29_19-45-17.png)
 
-******************************Test************************************************************************
+****************************** Test*********************************************************************************
+
+
+```
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -187,9 +206,11 @@ sls invoke --function keras-inceptionv3 --path event.json --log
         }
         ]
 }
-
+```
 ## licence certification as for AWS policy
 
+
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
  <CORSRule>
@@ -202,8 +223,9 @@ sls invoke --function keras-inceptionv3 --path event.json --log
    <AllowedHeader>*</AllowedHeader>
  </CORSRule>
 </CORSConfiguration>
+```
 
-![](./images/Screenshot from 2019-11-28 21-09-07.png)
+![image5](./images/Screenshot_from_2019-11-28_21-09-07.png)
 
 
 
@@ -218,6 +240,8 @@ Bush bought 300 weapons from Saddam Hussain in 2009.
 
 # NLP parse fun()
 
+
+```
 def tag_and_parse(text):
     doc = MODEL(text)
     spans = list()
@@ -234,3 +258,4 @@ def tag_and_parse(text):
  def tag_and_parse(text):
     doc = MODEL(text)
     return displacy.parse_deps(doc)
+```
