@@ -6,6 +6,7 @@
 
 ![](./images/Machine-Learning-Model-Live-2.jpg)
 
+```
 #download moni-conda
 bash Miniconda3-latest-Linux-x86_64.sh
 
@@ -16,10 +17,13 @@ ls -l # locate get-pip.py in folder
 
 sudo python3.6 get-pip.py
 sudo pip3 install testresources
+```
+
+
 
 # download docker from https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/
 
-
+```
 #version containerd.io_1.2.4-1_amd64.deb,docker-ce-cli_18.09.3~3-0~ubuntu-bionic_amd64.deb, docker-ce_18.09.3~3-0~ubuntu-bionic_amd64.deb
 
 sudo dpkg -i containerd.io_1.2.4-1_amd64.deb
@@ -41,36 +45,53 @@ sudo apt install -y nodejs
 #check node version 
 nodejs -v # v10.17.0
 npm -v #(6.11.3)
+```
+
+
 
 # install serverless framework
+```
 sudo npm install -g serverless
-
-sudo chown -R $USER:$(id -gn $USER) /home/kk/.config #your .config path
+#your .config path
+sudo chown -R $USER:$(id -gn $USER) /home/kk/.config
 serverless
+
+```
+
+
 
 # setup AWS user and download ID and Access key from https://console.aws.amazon.com/iam/home?region=us-east-2#/users$new?step=final&accessKey&userNames=serverlessAI&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
 
 
 
+```
 sls config credentials --provider aws --key [FNGDGGNGNBKGF] --secret [AVDBJKFKJFK] 
 
 #open hidden file goto .aws folder 
 cat credentials
+```
+
+
 
 # create hello world application
 
-
+```
 mkdir hello-world
 sls create --template aws-python3 --name hello-service
 
 #check AWS files, then finally deploy
 sls deploy
+```
+
+
+
 # california-housing
 
 ***************************** scikit learn model *******************************************************************
 
 
 
+```
 conda create -n scikit-dev python=3.6 pylint rope jupyter
 conda activate scikit-dev
 conda install scikit-learn=0.20.2 jupyter pandas pyliny rope
@@ -85,20 +106,25 @@ sudo sls deploy
 
 #check on responce from server 
 sls invoke --function predict-price --path event.json
+```
+
+
 
 ## Part of speech tags and parse tree
 
 ************************ Part of speech tags and parse tree *************************************
 
-
-
+```
 conda create -n spacy-dev python=3.6 pylint rope jupyter
 conda activate spacy-dev
 pip install spacy
+```
+
+
 
 # Download spacy model
 
-
+```
 python -m spacy download en_core_web_sm
 
 sls create --template aws-python3 --name spacy-entities
@@ -110,6 +136,9 @@ sls invoke local --function parse-text --path event.json
 sudo sls deploy
 
 sls invoke --function parse-text --path event.json --log
+```
+
+
 
 ![kk](./images/Screenshot_from_2019-11-27_18-19-42.png)
 
@@ -117,11 +146,15 @@ sls invoke --function parse-text --path event.json --log
 
 *************************** Recognized Named Entities****************************************************************
 
+```
 cd spacy-assignment
 conda activate spacy-dev
 sls invoke local --function parse-text-kk --path event.json
 sls deploy
 sls invoke --function parse-text-kk --path event.json --log
+```
+
+
 
 ![image1](./images/Screenshot_from_2019-11-28_12-42-56.png)
 
@@ -129,11 +162,13 @@ sls invoke --function parse-text-kk --path event.json --log
 
 ****************************** keras-resnet50 ***********************************************************************
 
+```
 conda create -n keras-dev python=3.6 pylint rope jupyter
 
 conda activate keras-dev
 
 pip install tensorflow==1.12.0 keras==2.2.4 boto3 pillow
+
 #check tensorflow and open notebook to that env
 /home/kk/anaconda/envs/keras-dev/bin/jupyter notebook
 
@@ -143,27 +178,40 @@ sls plugin install -n serverless-python-requirements@4.2.4
 
 #sls invoke local --function resnet50-classify --path event.json
 sls invoke local --function keras-resnet50 --path event.json --log
+```
+
+
 
 ![image2](./images/Screenshot_from_2019-11-29_13-58-37.png)
 
 ![image3](./images/Screenshot_from_2019-11-28_19-46-42.png)
 
 # create deployment env
+```
 conda create -n keras-deploy python=3.6
 conda activate keras-deploy
 pip install tensorflow==1.12.0 keras==2.2.4
 
 **copy tensorflow and PIL foler form this new env.
+```
+
+
 
 # to check which package need to upload
+```
 sudo sls package
+```
+
+
 
 check packege size should be around 90MB
 
 # check before deploy
+```
 sudo sls deploy
 
 sls invoke --function resnet50-classify --path event.json --log
+```
 
 
 
@@ -171,6 +219,7 @@ sls invoke --function resnet50-classify --path event.json --log
 
 ****************************** keras-inceptionv3********************************************************************
 
+```
 conda create -n keras-inception python=3.6 pylint rope jupyter
 
 conda activate keras-inception
@@ -185,6 +234,9 @@ sls invoke local --function keras-inceptionv3 --path event.json --log
 sudo sls deploy
 
 sls invoke --function keras-inceptionv3 --path event.json --log
+```
+
+
 
 ![image4](./images/Screenshot_from_2019-11-29_19-45-17.png)
 
