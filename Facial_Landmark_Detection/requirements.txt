@@ -171,7 +171,7 @@ pycparser==2.19
 pycrypto==2.6.1
 pycryptodome==3.8.2
 PyDispatcher==2.0.5
-Pygments==2.3.0
+Pygments==2.7.4
 PyHamcrest==1.9.0
 PyMuPDF==1.14.16
 pyOpenSSL==19.0.0
