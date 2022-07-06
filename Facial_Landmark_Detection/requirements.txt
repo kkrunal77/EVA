@@ -120,7 +120,7 @@ keras-tqdm==2.0.1
 kiwisolver==1.0.1
 lightgbm==2.2.2
 llvmlite==0.26.0
-lxml==4.4.1
+lxml==4.9.1
 Markdown==3.0.1
 MarkupSafe==1.1.0
 matplotlib==3.0.2
